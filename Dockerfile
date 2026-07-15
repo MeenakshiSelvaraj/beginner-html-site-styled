@@ -1,4 +1,4 @@
-M nginx:latest
+FROM nginx:latest
 
 COPY . /usr/share/nginx/html
 
