@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: beginner-website-deployment
+  labels:
+    app: beginner-website
+
+spec:
+  replicas: 5
+
+  selector:
+    matchLabels:
+      app: beginner-website
+
+  template:
+    metadata:
+      labels:
+        app: beginner-website
+
+    spec:
+      containers:
+      - name: beginner-website
+        image: meenakshi2610/beginner-website:latest
+        ports:
+        - containerPort: 80
